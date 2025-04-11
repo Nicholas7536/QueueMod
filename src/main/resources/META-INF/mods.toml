@@ -1,0 +1,35 @@
+modLoader = "javafml" # mandatory
+loaderVersion = "[40,)" # mandatory
+
+license = "All rights reserved"
+# Optional URL for issue tracking
+#issueTrackerURL = "https://your.issue.tracker.url"
+
+[[mods]] # mandatory
+modId = "queuemod" # mandatory (update this to match your mod ID)
+version = "${file.jarVersion}" # mandatory
+displayName = "Queue Mod" # mandatory
+# Optional URLs for updates, homepage, and logo
+#updateJSONURL = "https://change.me.example.invalid/updates.json"
+#displayURL = "https://your.mods.homepage.url"
+logoFile = "queuemod.png" # optional
+credits = "Thanks to the team" # optional
+authors = "Your Name" # optional
+description = '''
+This mod handles player queues on the server side.
+'''
+
+# Dependency for the mod to run on the server
+[[dependencies.queuemod]] # optional
+modId = "forge" # mandatory
+mandatory = true # mandatory
+versionRange = "[40,)" # mandatory
+ordering = "NONE"
+side = "SERVER" # server only mod
+
+[[dependencies.queuemod]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,1.19)"
+ordering = "NONE"
+side = "SERVER" # server only mod
